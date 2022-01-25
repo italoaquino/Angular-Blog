@@ -1,0 +1,99 @@
+.article{
+    text-align: center;
+    margin-top: 0px;
+   
+}
+
+
+.post-preview{
+    width: 42%;
+    margin-top: 5% !important;
+    margin-left: 25% !important;
+    text-align: justify;
+    padding-bottom: 1%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.233)
+}
+
+
+.post-title{
+    font-size: 29px !important;
+    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Merriweather', serif;
+}
+
+.post-subtitle{
+    font-size: 14px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.post-meta{
+    font-size: 12px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+
+@media (max-width: 991px)
+{
+    
+    .post-preview{
+        width: 45%;
+        margin-top: 10% !important;
+        margin-left: 25% !important;
+        text-align: justify;
+        padding-bottom: 1%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.233)
+    }
+    
+    .post-title{
+        font-size: 22px !important;
+        font-family: 'Libre Franklin', sans-serif;
+        font-family: 'Merriweather', serif;
+    }
+
+    .post-subtitle{
+        font-size: 15px !important;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    
+    
+    .post-meta{
+        font-size: 10px !important;
+        font-family: 'Montserrat', sans-serif !important;
+
+    }
+
+}
+
+@media (max-width: 375px)
+{
+    
+    .post-preview{
+        width: 45%;
+        margin-top: 10% !important;
+        margin-left: 25% !important;
+        text-align: justify;
+        padding-bottom: 1%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.233)
+    }
+    
+   
+    .post-subtitle{
+        font-size: 9px !important;
+        font-family: 'Libre Franklin', sans-serif;
+        font-family: 'Merriweather', serif;
+    }
+
+    .post-title{
+        font-size: 14px !important;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .post-meta{
+        font-size: 6px !important;
+        font-family: 'Montserrat', sans-serif !important;
+
+    }
+
+}

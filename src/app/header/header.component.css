@@ -1,0 +1,27 @@
+.navbar-nav{
+    margin-left: 25% !important;
+}
+
+.navbar{
+    font-family: 'Merriweather', serif;
+}
+
+.d-flex{
+    margin-top: 1%;
+    margin-left: 40%;
+}
+
+@media (max-width: 991px)
+{
+    .navbar-nav{
+        margin: 0px;
+        text-align: left;
+        padding-bottom: 10px;
+
+    }
+
+    .container-fluid{
+        display: none;
+    }
+
+}
