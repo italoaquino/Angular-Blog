@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, empty, Observable, of, Subject } from 'rxjs';
 import { Post } from '../models/post';
 import { PostService } from '../services/post.service';
 
@@ -13,12 +13,20 @@ export class PostsComponent implements OnInit {
   
 
   posts$ : Observable<Post[]> | undefined
+  error$ = new Subject<boolean>();
 
   constructor(private PostService : PostService) { }
 
   ngOnInit(): void {
 
-    this.posts$ = this.PostService.list();
+    this.posts$ = this.PostService.list()
+    .pipe(
+      catchError(error => {
+        console.error(error);
+        this.error$.next(true);
+        return of();
+      })
+    )
   }
 
 }

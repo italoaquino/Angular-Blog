@@ -1,21 +1,29 @@
 .container{
     margin-top: 4%;
-    width: 50%;
+    width: 90%;
 }
 
 .breadcrumb{ 
     padding-left: 26%;
     background-color: white;
+    font-family: 'Mochiy Pop P One', sans-serif !important;
+
 }
 
 .form-control{
-    border-radius: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    
+    font-family: 'Oswald', sans-serif !important;
 }
 
 .btn{
-    border-radius: 30px;
-    width: 100%;
+    border-radius: 5px;
+    width: 10%;
+    margin-right: 10px;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+label{
+    font-family: 'Mochiy Pop P One', sans-serif !important;
 }
 
 .h1-post{
@@ -28,3 +36,48 @@
     margin-left: 30%;
 }
 
+@media (max-width: 991px)
+{
+    .container{
+        width: 100%;
+        padding: 0px;
+        margin-right: 10%;
+    }
+    
+    .input{
+        
+    }
+
+    .breadcrumb{ 
+        padding-left: 26%;
+        background-color: white;
+        font-family: 'Mochiy Pop P One', sans-serif !important;
+    
+    }
+    
+    .form-control{
+        
+        font-family: 'Oswald', sans-serif !important;
+    }
+    
+    .btn{
+        border-radius: 5px;
+        width: 10%;
+        margin-right: 10px;
+        font-family: 'Oswald', sans-serif !important;
+    }
+    
+    label{
+        font-family: 'Mochiy Pop P One', sans-serif !important;
+    }
+    
+    .h1-post{
+        font-family: 'Mochiy Pop P One', sans-serif !important;
+        font-size: 50px !important;
+        text-align: center !important;
+        margin-top: 3%;
+        padding: 10px;
+        width: 40%;
+        margin-left: 30%;
+    }
+}

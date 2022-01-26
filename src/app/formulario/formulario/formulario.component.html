@@ -2,22 +2,59 @@
     <li class="breadcrumb-item"><a [routerLink]="'/'">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Post</li>
 </ol>
-
-<h1 class = "h1-post">Enviar Post</h1>
 <div class = "container">
-    <form class = "form-horizontal" >
-        <div class="mb-3">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título">
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subtítulo">
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Autor">
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite seu texto" rows="6"></textarea>
-        </div>
-        <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+    <form class = "form-group" [formGroup]="formulario" (ngSubmit)="onSubmit()" >
+        
+            <div class="mb-3" >
+                <label for="exampleInputEmail1">Título</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título" formControlName = "tittle"/>
+                <ng-container *ngIf="formulario.get('tittle')?.touched">
+                    <span *ngIf="formulario.get('tittle')?.errors">
+                        <div class="alert alert-danger" role="alert">
+                            Esse campo é obrigatório! E deve conter mais de 10 caracteres!
+                        </div>
+                    </span>
+                </ng-container>
+            </div>
+            
+            <div class="mb-3">
+                <label for="exampleInputEmail1">Subtítulo</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subtítulo" formControlName = "subtittle">
+                <ng-container *ngIf="formulario.get('subtittle')?.touched">
+                    <span *ngIf="formulario.get('subtittle')?.errors">
+                        <div class="alert alert-danger" role="alert">
+                            Esse campo é obrigatório! E deve conter mais de 10 caracteres!
+                        </div>
+                    </span>
+                </ng-container>
+            </div>
+            
+            <div class="mb-3">
+                <label for="exampleInputEmail1">Autor</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Autor" formControlName = "author">
+                <ng-container *ngIf="formulario.get('author')?.touched">
+                    <span *ngIf="formulario.get('author')?.errors">
+                        <div class="alert alert-danger" role="alert">
+                            Esse campo é obrigatório! E deve conter mais de 5 caracteres!
+                        </div>
+                    </span>
+                </ng-container>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1">Texto</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite seu texto" formControlName = "text" rows="6"></textarea>
+                <ng-container *ngIf="formulario.get('text')?.touched">
+                    <span *ngIf="formulario.get('text')?.errors">
+                        <div class="alert alert-danger" role="alert">
+                            Esse campo é obrigatório! E deve conter mais de 10 caracteres!
+
+                        </div>
+                    </span>
+                </ng-container>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid" >Enviar</button>
+            <button type="submit" class="btn btn-success" (click)="resetar()">Cancelar</button>
+
+       
     </form>
 </div>

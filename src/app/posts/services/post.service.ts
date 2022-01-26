@@ -15,7 +15,7 @@ export class PostService {
   list(){
     return this.httpClient.get<Post>(this.API)
       .pipe(
-        delay(1000),
+        delay(2000),
         tap(console.log)
       )
   }
