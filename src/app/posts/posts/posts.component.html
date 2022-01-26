@@ -1,18 +1,25 @@
 
-
-
 <div class = "container">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active"><a [routerLink]="'/'">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page"></li>
+    </ol>
     <article class = "article">
-        <div class="post-preview" *ngFor="let post of posts">
-            <a href="post.html">
-                <h2 class="post-title">{{ post.tittle}}</h2>
-                <h3 class="post-subtitle">{{post.text}}</h3>
-            </a>
-            <p class="post-meta">
-                Posted by
-                <a href="#!">Ítalo Aquino</a> on
-                {{post.date}}
-            </p>
+        <div *ngIf="posts$ | async as posts; else loading">
+            <div class="post-preview" *ngFor="let post of posts">
+                <a href="post.html">
+                    <h2 class="post-title">{{ post.tittle}}</h2>
+                    <h3 class="post-subtitle">{{post.subtittle}}</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">{{post.author}}</a> on
+                    {{post.date}}
+                </p>
+            </div>
         </div>
+        <ng-template #loading>
+            <span>Carregando...</span>
+        </ng-template>
     </article>
 </div>

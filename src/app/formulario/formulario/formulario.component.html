@@ -1,17 +1,23 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]="'/'">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Post</li>
+</ol>
+
+<h1 class = "h1-post">Enviar Post</h1>
 <div class = "container">
-
-
-    <div class="mb-3">
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Título">
-    </div>
-    <div class="mb-3">
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Subtítulo">
-    </div>
-    <div class="mb-3">
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Autor">
-    </div>
-    <div class="mb-3">
-        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite seu texto" rows="3"></textarea>
-    </div>
-    <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+    <form class = "form-horizontal" >
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subtítulo">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Autor">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite seu texto" rows="6"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+    </form>
 </div>

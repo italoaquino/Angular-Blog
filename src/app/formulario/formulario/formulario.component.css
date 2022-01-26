@@ -1,13 +1,30 @@
 .container{
-    margin-top: 5%;
+    margin-top: 4%;
     width: 50%;
 }
 
+.breadcrumb{ 
+    padding-left: 26%;
+    background-color: white;
+}
+
 .form-control{
-    border-radius: 8px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .btn{
-    border-radius: 8px;
+    border-radius: 30px;
     width: 100%;
 }
+
+.h1-post{
+    font-family: 'Mochiy Pop P One', sans-serif !important;
+    font-size: 50px !important;
+    text-align: center !important;
+    margin-top: 3%;
+    padding: 10px;
+    width: 40%;
+    margin-left: 30%;
+}
+
