@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts/posts.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     PostsRoutingModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    NgbModule
   ]
 })
 export class PostsModule { }

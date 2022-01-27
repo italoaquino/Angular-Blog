@@ -10,7 +10,10 @@ import { PostService } from '../services/post.service';
 })
 export class PostsComponent implements OnInit {
 
-  
+  showNavigationArrows = false;
+  showNavigationIndicators = false;
+  images = ['../../assets/livros.jpg', '../../assets/livros.jpg', '../../assets/livros.jpg'];
+
 
   posts$ : Observable<Post[]> | undefined
   error$ = new Subject<boolean>();

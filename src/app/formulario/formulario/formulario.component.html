@@ -1,7 +1,4 @@
-<ol class="breadcrumb">
-    <li class="breadcrumb-item"><a [routerLink]="'/'">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Post</li>
-</ol>
+
 <div class = "container">
     <form class = "form-group" [formGroup]="formulario" (ngSubmit)="onSubmit()" >
         
@@ -52,7 +49,9 @@
                     </span>
                 </ng-container>
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid" >Enviar</button>
+
+            
+            <button type="submit" class="btn btn-primary"  >Enviar</button>
             <button type="submit" class="btn btn-success" (click)="resetar()">Cancelar</button>
 
        
