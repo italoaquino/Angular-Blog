@@ -3,12 +3,20 @@
 }
 
 .navbar{
-    font-family: 'Merriweather', serif;
+    font-family: 'PT Sans', sans-serif;
+    height: 10%;
+    font-size: 20px !important;
+    color: rgba(0, 0, 252, 0.87) !important;
+    background-color: rgb(8, 58, 197) !important;
+}
+
+a:hover{
+    color: cadetblue !important;
 }
 
 .d-flex{
-    margin-top: 1%;
-    margin-left: 40%;
+    margin-top: 3%;
+    margin-left: 53%;
 }
 
 @media (max-width: 991px)
@@ -17,7 +25,11 @@
         margin: 0px;
         text-align: left;
         padding-bottom: 10px;
-
+        
+    }
+    
+    .navbar{
+        height: 20% !important;
     }
 
     .container-fluid{

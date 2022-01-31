@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, empty, Observable, of, Subject } from 'rxjs';
 import { Post } from '../models/post';
 import { PostService } from '../services/post.service';
@@ -18,7 +19,7 @@ export class PostsComponent implements OnInit {
   posts$ : Observable<Post[]> | undefined
   error$ = new Subject<boolean>();
 
-  constructor(private PostService : PostService) { }
+  constructor(private PostService : PostService, private router : Router, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -30,6 +31,10 @@ export class PostsComponent implements OnInit {
         return of();
       })
     )
+  }
+
+  details(guid : any){
+    this.router.navigate(['details', guid], {relativeTo : this.route})
   }
 
 }

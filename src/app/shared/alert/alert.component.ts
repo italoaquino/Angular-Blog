@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 @Component({
   selector: 'app-alert',
   templateUrl: './alert.component.html',
@@ -7,12 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bsModelRef :BsModalRef ) { }
 
-  @Input() message : String | undefined;
-  @Input() type = 'sucess'
-
+  @Input() message: String | undefined;
+  @Input() type : String | undefined 
+  
   ngOnInit(): void {
+  }
+
+  OnCLose(){
+    this.bsModelRef.hide();
   }
 
 }

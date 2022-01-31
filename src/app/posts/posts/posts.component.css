@@ -1,13 +1,24 @@
 .article{
     text-align: center;
-    margin-top: 0px;
+    margin-top: -10px !important;
+    background-image: url();
+    width: 100%;
 }
 
+.container{
+    width: 80%;
+    height: 50px !important;
+
+}
+
+.teste{
+    margin-top: -18px !important;
+}
 
 .post-preview{
     width: 50%;
     margin-top: 5% !important;
-    margin-left: 25% !important;
+    margin-left: 10% !important;
     text-align: justify;
     padding-bottom: 1%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.233);
@@ -15,6 +26,34 @@
     text-decoration:none;
 }
 
+.card{
+z-index: 1000;
+position: fixed;
+left: 250px;
+width: 0;
+height: 100%;
+margin-bottom: 100px;
+margin-left: -250px;
+overflow-y: auto;
+border: 1px solid black;
+background: rgb(255, 255, 255);
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+.alert{
+    margin-top: 100px !important;
+    margin-left: 80px !important;
+    width: 90%;
+    
+}
+
+.card-footer{
+    padding-top: 100px;
+    background-color: white;
+}
 
 .post-title{
     font-size: 40px !important;
@@ -37,7 +76,6 @@
 
 .spinner-border{
     margin-top: 10% !important;
-    
 }
 
 .breadcrumb{ 
@@ -45,6 +83,15 @@
     background-color: white;
     font-family: 'Mochiy Pop P One', sans-serif !important;
 
+}
+
+.col-sm{
+    width: 20% !important;
+
+}
+
+.col-md-{
+    width: 80% !important;
 }
 
 @media (max-width: 991px)

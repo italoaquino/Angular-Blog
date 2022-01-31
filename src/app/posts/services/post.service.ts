@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { delay, tap } from 'rxjs';
+import { delay, take, tap } from 'rxjs';
 import { Post } from '../models/post';
 
 @Injectable({
@@ -15,10 +15,14 @@ export class PostService {
   list(){
     return this.httpClient.get<Post>(this.API)
       .pipe(
-        delay(2000),
+        delay(0),
         tap(console.log)
       )
   }
 
+  details(guid : any){
+    return this.httpClient.get<Post>(`${this.API}${guid}`)
+      .pipe(take(1));
+  }
 
 }

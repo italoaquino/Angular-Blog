@@ -9,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    PostsComponent
+    PostsComponent,
+   
   ],
   imports: [
     CommonModule,
